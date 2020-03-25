@@ -235,7 +235,7 @@ display: none;
 /* ここからプロフィール */
 img.momo{
   border-radius: 50%;
-  border: solid 8px rgba(200, 200, 200, 0.219);
+  border: solid 12px rgba(200, 200, 200, 0.219);
   height: 350px;
   width: 350px;
   
