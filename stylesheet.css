@@ -1,0 +1,716 @@
+* {
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-weight: 500;
+  font-family: 'Raleway', sans-serif;
+}
+a {
+  text-decoration: none;
+  outline: none;
+}
+.clear {
+  clear: left;
+}
+
+/* ここからヘッダー */
+header {
+  height: 70px;
+  width: 100%;
+  background-color: rgba(168, 166, 168, 0.418);
+  position :fixed;
+  top: 0;
+  z-index: 10;
+} 
+.header-container {
+  width: 100%;
+  padding: 0 60px;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.header-left {
+  float: left;
+}
+
+.header-right {
+  float: right;
+  letter-spacing: 2px;
+
+}
+img.logo{
+  transform: translate(20%,35%);
+}
+
+.header-right a {
+  line-height: 65px;
+  padding-right: 25px;
+  color: white;
+  display: inline-block;
+  float: left;
+  transition-duration: 0.2s;
+}
+.header-right a:hover {
+  opacity: 0.5;
+}
+.title-name{
+  font-size: 16px;
+  padding-left: 10px;
+  color: white;
+  line-height: 65px;
+  letter-spacing: 4px;
+  display: inline-block;
+  font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+}
+
+/* ここからメイン画面 */
+.top-wrapper {
+  padding: 200px 0 450px 0;
+  background-image: url(pf-image-1.jpg);
+  background-size: cover;
+  color: white;
+  text-align: right;
+}
+.top-wrapper h1 {
+  opacity: 0.7;
+  font-size: 40px;
+  letter-spacing: 4px;
+  font-weight: 500;
+  font-family: 'Raleway', sans-serif;
+  scroll-behavior: smooth;
+}
+.top-wrapper p {
+  opacity: 0.7;
+}
+.container {
+  width: 100%;
+  padding: 0 320px;
+  margin: 0 auto;
+  display: inline-block;
+}
+.btn-wrapper {
+  margin: 20px 0;
+}
+.btn-wrapper p {
+  margin: 10px 0;
+}
+.instagram {
+  background-color: #aa49aa;
+  margin-right: 10px;
+}
+span.fa.fa-instagram {
+  margin-right: 5px;
+}
+.github {
+  background-color: black;
+}
+span.fa.fa-github {
+  margin-right: 8px;
+}
+
+.btn {
+  padding: 8px 24px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 4px;
+  text-align: center;
+}
+.btn:hover {
+  opacity: 1;
+}
+
+/* ヘッダーのハンバーガー */
+.header-left{
+display: none;
+}
+
+#drawer-checkbox {
+  display: none;
+}
+#drawer-icon {
+  display: none;
+  cursor: pointer;
+  display: inline-block;
+  height: 50px;
+  position: relative;
+  width: 50px;
+}
+#drawer-icon span {
+  background:  rgb(0, 0, 0);
+  border-radius: 4px;
+  display: block;
+  height: 16%;
+  left: 50%;
+  margin: -8% 0 0 -42%;
+  position: absolute;
+  top: 50%;
+  transition: all 0.3s ease-in-out;
+  width: 84%;
+}
+#drawer-icon span::before,
+#drawer-icon span::after {
+  -webkit-transform: rotate(0);
+  background: #333;
+  border-radius: 4px;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 50%;
+  margin: -8% 0 0 -50%;
+  position: absolute;
+  top: 50%;
+  transform: rotate(0);
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+#drawer-icon span::before {
+  margin-top: -38%;
+}
+#drawer-icon span::after {
+  margin-top: 19%;
+}
+#drawer-checkbox:checked ~ #drawer-icon span {
+  background: rgba(51, 51, 51, 0);
+}
+#drawer-checkbox:checked ~ #drawer-icon span::before,
+#drawer-checkbox:checked ~ #drawer-icon span::after {
+  content: "";
+  display: block;
+  height: 100%;
+  left: 50%;
+  margin: -8% 0 0 -42%;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+#drawer-checkbox:checked ~ #drawer-icon span::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+#drawer-checkbox:checked ~ #drawer-icon span::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+#drawer-content {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 40;
+  width: 250px;
+  max-width: 90%;
+  height: 100%;
+  background: #fff;
+  transition: all 0.3s ease-in-out 0s;
+  transform: translateX(-100%);
+}
+#drawer-checkbox:checked ~ #drawer-content {
+  transform: translateX(0);
+  box-shadow: 6px 0 25px rgba(0, 0, 0, 0.16);
+}
+
+#drawer-close {
+  display: none;
+  position: fixed;
+  z-index: 39;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0;
+  transition: all 0.3s ease-in-out 0s;
+}
+#drawer-checkbox:checked ~ #drawer-close {
+  display: block;
+  opacity: 0.3;
+}
+
+
+/* ここからプロフィール */
+img.momo{
+  border-radius: 50%;
+  border: solid 8px rgba(200, 200, 200, 0.219);
+  height: 350px;
+  width: 350px;
+  
+}
+.profile-text{
+  display: flex;
+  justify-content: space-around;
+	padding:20px 10px;
+	font-size:13px;
+  border:1px solid rgba(74, 75, 77, 0.322);
+  margin: 0 190px;
+  position: relative;
+}
+.profile-text:hover{
+  border-color: black;
+}
+.profile-text::after{
+	content: "PROFILE";
+	position: absolute;
+	top: -8px;
+	left: 10px;
+	background: #fff;
+	font-size: 19px;
+	color: rgb(77, 78, 80);
+	padding: 0 10px;
+}
+
+.profile-box{
+  height: 100vh;
+  padding-top: 150px;
+}
+
+.box {
+  height: 64px;
+  transition: all .15s ease-in-out;
+}
+
+.box-title {
+  letter-spacing: 4px;
+  color: #44444481;
+  line-height: 64px;
+  padding: 0 20px;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;
+}
+
+.box-title p{
+  font-size: 20px;
+}
+
+.box-title p:hover{
+  opacity: 0.5;
+}
+
+.box-content {
+  padding: 20px 20px;
+  font-size: 12pt;
+  color: rgba(0,0,0,.54);
+  /* display: inline-block; */
+}
+
+.box-content-text{
+  font-size: 12px;
+  margin-top: 6px;
+}
+.image-boxes{
+  top: 0;
+  right: -10px;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+/* .box-close {
+  position: absolute;
+  height: 64px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: none;
+} */
+
+/* 
+.accordion {
+  margin: auto;
+  width: 900px;
+}
+.accordion input {
+  display: none;
+}
+.box {
+  height: 64px;
+  transition: all .15s ease-in-out;
+}
+.box-title {
+  letter-spacing: 4px;
+  color: #44444481;
+  line-height: 64px;
+  padding: 0 20px;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;
+}
+.box-title p{
+  font-size: 20px;
+}
+.box-title p:hover{
+  opacity: 0.5;
+}
+.box-content {
+  padding: 20px 20px;
+  font-size: 12pt;
+  color: rgba(0,0,0,.54);
+  display: none;
+}
+.box-content-text{
+  font-size: 12px;
+  margin-top: 6px;
+}
+.box-close {
+  position: absolute;
+  height: 64px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: none;
+}
+input:checked + .box {
+  height: auto;
+  margin: 16px 0;
+  box-shadow: 0 0 6px rgba(0,0,0,.16),0 6px 12px rgba(0,0,0,.32);
+}
+input:checked + .box .box-title {
+  border-bottom: 1px solid rgba(0,0,0,.18);
+}
+input:checked + .box .box-content,
+input:checked + .box .box-close {
+  display: block;
+}
+.arrows section .box-title {
+  padding-left: 68px;
+  text-align: center;
+  width: calc(100% - 64px);
+}
+.arrows section .box-title:before {
+  position: absolute;
+  display: block;
+  content: '\203a';
+  font-size: 18pt;
+  left: 20px;
+  top: -2px;
+  transition: transform .15s ease-in-out;
+  color: rgba(0,0,0,.54);
+}
+input:checked + section.box .box-title:before {
+  transform: rotate(90deg);
+} */
+
+
+/* ここからスキル */
+.skills-box{
+  height: 100vh;
+  padding-top: 150px;
+}
+
+.skills-title{
+  position: relative;
+  display: inline-block;
+  padding: 0 140px;
+  font-size: 40px;
+  margin-bottom: 120px;
+  letter-spacing: 6px;
+}
+
+.skills-title:before, .skills-title:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    height: 1px;
+    background-color: black;
+}
+.skills-title:before {
+  left:0;
+}
+.skills-title:after {
+  right: 0;
+}
+
+.fadein {
+  opacity : 0;
+  transform: translateY(20px);
+  transition: all 1s;
+}
+.box16{
+  width: 400px;
+  margin: 10px 20px;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-align: center;
+  top: -35px;
+  left: 50px;
+  background-color: white;
+  padding: 40px;
+  position: relative;
+  box-shadow: 10px 10px 30px -10px;
+  background: -webkit-repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+  background: repeating-linear-gradient(-45deg, #eeeded, #ecebeb 3px,#ebebeb 3px, #dfdfdf 7px);
+}
+.skills-maintext{
+  font-size: 25px;
+  font-weight: bold;
+  padding-bottom: 30px;
+}
+.skills-message{
+  line-height: 30px;
+}
+span.fa.fa-desktop {
+  margin-right: 10px;
+}
+span.fa.fa-lightbulb-o {
+  margin-right: 10px;
+}
+.vision{
+  background-color: #EEEEEE;
+  position: relative;
+}
+.blackbgbg{
+  background-color: #adadad;
+  width: 100%;
+}
+figure{
+  margin: 0;
+}
+
+/* ここからフッダー */
+#contact {
+  width: 100%;
+  /* height: 100vh; */
+  background-color: #111;
+  overflow: hidden;
+  padding-bottom: 200px;
+}
+
+.section-header {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 130px;
+  font-size: 30px;
+  letter-spacing: 6px;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.contact-wrapper {
+  margin: 0 auto;
+  padding-top: 20px;
+  position: relative;
+  max-width: 800px;
+}
+
+/* Begin Left Contact Page */
+.form-horizontal {
+  float: left;
+  max-width: 400px;
+  font-weight: 400;
+}
+input::placeholder{
+  padding-left: 10px;
+}
+textarea::placeholder{
+  padding-left: 10px;
+  line-height: 50px;
+}
+
+
+.form-control, textarea {
+  max-width: 400px;
+  background-color: #111;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.form-control{
+  width: 400px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.send-button {
+  margin-top: 15px;
+  outline: none;
+  height: 34px;
+  width: 400px;
+  background-color: rgba(17, 17, 17, 0.582);
+  /* overflow: hidden; */
+  /* transition: all .2s ease-in-out; */
+}
+
+.button {
+  /* width: 400px; */
+  height: 34px;
+  /* transition: all .2s ease-in-out; */
+}
+.list-item{
+  text-align: right;
+  margin-top: 20px;
+}
+
+.send-text {
+  text-align: center;
+  font-size: 14px;
+  /* display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #111; */
+}
+
+/* .button:hover {
+  transform: translate3d(0px, -29px, 0px);
+} */
+
+/* Begin Right Contact Page */
+.direct-contact-container {
+  max-width: 400px;
+  float: right;
+  margin-top: 8px;
+}
+
+/* Location, Phone, Email Section */
+.contact-list {
+  list-style-type: none;
+  margin-left: -30px;
+  padding-right: 20px;
+}
+
+.list-item {
+  line-height: 4;
+  color: #aaa;
+}
+
+.contact-text {
+  font: 300 18px 'Lato', sans-serif;
+  letter-spacing: 1.9px;
+  color: #bbb;
+}
+
+.place {
+  margin-left: 5px;
+}
+
+.gmail {
+  margin-left: 5px;
+}
+
+.contact-text a {
+  color: #bbb;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.contact-text a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/* Social Media Icons */
+.social-media-list {
+  position: relative;
+  font-size: 2.3rem;
+  text-align: center;
+  /* width: 100%; */
+}
+
+.social-media-list li a {
+  color: #fff;
+}
+
+.social-media-list li {
+  position: relative; 
+  top: 0;
+  left: -20px;
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+  margin: 10px auto;
+  line-height: 70px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgb(27,27,27);
+  cursor: pointer; 
+  transition: all .2s ease-in-out;
+}
+
+.social-media-list li:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 0 1px #fff;
+  transition: all .2s ease-in-out;
+}
+
+.social-media-list li:hover {
+  background-color: #fff; 
+}
+
+.social-media-list li:hover:after {
+  opacity: 1;  
+  transform: scale(1.12);
+  transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+}
+
+.social-media-list li:hover a {
+  color: #111;
+}
+
+.copyright {
+  font: 200 14px 'Oswald', sans-serif;
+  color: #555;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+hr {
+  border-color: rgba(255,255,255,.8); ;
+}
+
+
+
+
+
+
+/* .blackbox{
+  background-color: black;
+  width: 75%;
+  padding: 280px 0px;
+}
+
+.visionbox{
+  padding: 50px 20px;
+  text-align: center;
+  position: relative;
+  background-color: white;
+  box-shadow: 10px 10px 15px -10px;
+}
+.futureTitle{
+  padding-top:20px;
+  font-size: 50px;
+}
+.futuretextbox{
+  border: dotted #474747 2px;
+  padding: 0 20px;
+  margin: 40px auto;
+  width: 80%;
+}
+.futureTextTitle{
+    border: #474747 solid 2px;
+    display: inline-block;
+    padding: 5px 30px;
+    border-radius: 5px;
+    background-color: white;
+}
+span{
+  font-size: 15px;
+  padding-left: 5px;
+}
+.futuertext{
+  text-align: left;
+} */
