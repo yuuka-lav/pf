@@ -19,6 +19,9 @@
 
 /* スマホ向けレイアウト */
 @media (max-width: 670px) {
+  .direct-contact-container{
+    display: none;
+  }
   .list-item{
     display: none;
   }
