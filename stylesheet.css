@@ -24,7 +24,7 @@ header {
   background-color: rgba(168, 166, 168, 0.418);
   position :fixed;
   top: 0;
-  z-index: 10;
+  z-index: 800;
 } 
 .header-container {
   width: 100%;
@@ -72,6 +72,7 @@ img.logo{
   padding: 200px 0 450px 0;
   background-image: url(pf-image-1.jpg);
   background-size: cover;
+  background-position: center;
   color: white;
   text-align: right;
 }
@@ -245,13 +246,11 @@ img.momo{
   justify-content: space-around;
 	padding:20px 10px;
 	font-size:13px;
-  border:1px solid rgba(74, 75, 77, 0.322);
+  border: 1px solid rgba(74, 75, 77, 0.322);
   margin: 0 190px;
   position: relative;
 }
-.profile-text:hover{
-  border-color: black;
-}
+
 .profile-text::after{
 	content: "PROFILE";
 	position: absolute;
@@ -576,7 +575,9 @@ fieldset {
 .slider__img {
   box-shadow: 0px 10px 20px rgba(0,0,0,0.3); 
 }
+.hidden-instagram{
 
+}
 .slider__control {
   -webkit-appearance: none;
   width: 12px;
@@ -660,14 +661,10 @@ fieldset {
 }
 
 .slider__description {
-  max-width: 300px;
-    width: 100%;
-    text-align: left;
-    margin: 0 auto 5rem;
-    font-size: 1.5rem;
-    line-height: 2.2rem;
-    font-weight: inherit;
-    color: #333;
+  text-align: center;
+  margin: 0 auto 5rem;
+  font-weight: inherit;
+  color: #333;
 }
 .slider__item{
   overflow: hidden;
