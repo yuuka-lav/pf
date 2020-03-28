@@ -8,14 +8,15 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="responsive.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900,300" rel="stylesheet">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.3.min.js"></script>
     <script src="./fadein.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900,300" rel="stylesheet">  </head>
+  </head>
   <body>
     <header>
       <div class="header-left">
         <input id="drawer-checkbox" type="checkbox">
-        <label id="drawer-icon" for="drawer-checkbox"><span></span></label>
+        <label id="drawer-icon" for="drawer-checkbox"></label>
         <label id="drawer-close" for="drawer-checkbox"></label>
         <div id="drawer-content">
           <a class = "drawer-nametag" href="#">Home</a>
@@ -45,141 +46,127 @@
         <div class="btn-wrapper">
           <a href="https://www.instagram.com/kota_____gf/saved/?hl=ja" class="btn instagram"><span class="fa fa-instagram"></span>Instagram</a>
           <a href="https://github.com/yuuka-lav" class="btn github"><span class="fa fa-github"></span>Github</a>
-          <h3 class="scroll-btn"></h3>
         </div>
       </div>
     </div>
-  <div class= "profile-box" id="profile">
-    <h1 class = "profile-text">
-      <div class = "text-boxes">
-        <div class="box-content"><span class="fa fa-check"></span>関西学院大学 経済学部に在学中
-          <p class="box-content-text">主に財政学のデータ分析や政府間財政について学んでいます。</p>
-        </div>
-        <div class="box-content"><span class="fa fa-check"></span>趣味はダンスを踊ること
-          <p class="box-content-text">高校ではダンス部に３年間所属し、現在も大学でダンスサークルに所属しています。</p>
-        </div>
-        <div class="box-content"><span class="fa fa-check"></span>結婚式場でアルバイトの経験
-          <p class="box-content-text">幸せな空間を演出しチームと共に作り上げることにやりがいを感じています。</p>
-        </div>
-        <div class="box-content"><span class="fa fa-check">プログラミングスクールに通う</span>
-          <p class="box-content-text">1日11時間以上パソコンと向き合い、５人での共同開発に取り組みました。</p>
-        </div>
-      </div>
-      <div class = "image-boxes">
-        <img class = "momo" src="pf-image.jpg" >
-      </div>
-    </h1>
-  </div>
-
-
-  <figure>
-    <div class="skills-box" id="skills">
-      <div class="skills-title">SKILLS</div>
-      <section class="vision">
-        <div class="blackbgbg">
-          <div class="fadein">
-              <div class="box16">
-                  <p class="skills-maintext"><span class="fa fa-desktop"></span>Design・Front</p>
-                  <p class="skills-message">
-                    HTML / Haml / CSS / Scss<br>
-                    基本的なことはできます。<br>
-                    レスポンシブ対応も可能です。<br>
-                    javascrpt / jQuery<br>
-                    現在勉強中です。
-                  </p>
-              </div>
-              <div class="box16">
-                  <p class="skills-maintext"><span class="fa fa-desktop"></span>BackEnd</p>
-                  <p class="skills-message">
-                    Ruby on Rails<br>
-                    個人でのアプリ開発の経験あり<br>
-                    共同でのアプリ開発の経験あり<br>
-                    <br>
-                    制作物もご覧いただけます<br>
-                  </p>
-              </div>
-              <div class="box16">
-                  <p class="skills-maintext"><span class="fa fa-lightbulb-o"></span>Other</p>
-                  <p class="skills-message">
-                    AWS / MySQL / Git  <br>
-                    開発等で使用したツールです<br>
-                    AWSではES2を主に触れていました<br>
-                    <br>
-                    <br>
-                  </p>
-              </div>
+    <div class= "profile-box" id="profile">
+      <h1 class = "profile-text">
+        <div class = "text-boxes">
+          <div class="box-content"><span class="fa fa-check"></span>関西学院大学 経済学部に在学中
+            <p class="box-content-text">主に財政学のデータ分析や政府間財政について学んでいます。</p>
+          </div>
+          <div class="box-content"><span class="fa fa-check"></span>趣味はダンスを踊ること
+            <p class="box-content-text">高校ではダンス部に３年間所属し、現在も大学でダンスサークルに所属しています。</p>
+          </div>
+          <div class="box-content"><span class="fa fa-check"></span>結婚式場でアルバイトの経験
+            <p class="box-content-text">幸せな空間を演出しチームと共に作り上げることにやりがいを感じています。</p>
+          </div>
+          <div class="box-content"><span class="fa fa-check">プログラミングスクールに通う</span>
+            <p class="box-content-text">1日11時間以上パソコンと向き合い、５人での共同開発に取り組みました。</p>
           </div>
         </div>
-      </section>
-    </div>
-  </figure>
-
-
-
-
-  <!-- ここからポートフォリオ -->
-
-  <div class="portfolio-box" id = "portfolio">
-    <div class="portfolio-content">
-      <fieldset>
-        <legend class="portfolio-title">PORTFOLIO</legend>
-        <div class="slider">
-          <input type="radio" name="rSlide" id="rsl-1" class="slider__control" checked/>
-          <input type="radio" name="rSlide" id="rsl-2" class="slider__control"/>
-          <input type="radio" name="rSlide" id="rsl-3" class="slider__control"/>
-          <input type="radio" name="rSlide" id="rsl-4" class="slider__control"/>
-          <input type="radio" name="rSlide" id="rsl-5" class="slider__control"/>
-
-          <ul class="slider__list">
-              <li class="slider__item">
-                <label for="rsl-1" class="slider__label slider__label-1">
-                  <a href="http://52.194.83.62/" target="_blank">
-                  <img src="https://i.gyazo.com/31725590c0ae16ab8b10867d0ca24008.jpg" alt="Image from Gyazo" width="1440" >
-                  </a>
-                </label>
-              </li>
-              <li class="slider__item">
-                <label for="rsl-2" class="slider__label slider__label-2">
-                  <a href="http://52.194.83.62:1214" target="_blank">
-                  <img src="https://i.gyazo.com/a055508044eb2a565b9db6f147fe7995.jpg" alt="Image from Gyazo" width="1440" >
-                  </a>
-                </label>
-              </li>
-              <li class="slider__item">
-                <label for="rsl-3" class="slider__label slider__label-3">
-                  <a href="https://priceless-darwin-2f9176.netlify.com/" target="_blank">
-                  <img src="https://i.gyazo.com/f702607ee143ec86931ed88102ec8046.jpg" alt="Image from Gyazo" width="1440" >
-                  </a>
-                </label>
-              </li>
-              <li class="slider__item">
-                <label for="rsl-4" class="slider__label slider__label-4">
-                  <img src="no-image.png" alt="no-image" class="slider__img">
-                </label>
-              </li>
-              <li class="slider__item">
-                <label for="rsl-5" class="slider__label slider__label-5">
-                  <img src="no-image.png" alt="no-image" class="slider__img">
-                </label>
-              </li>
-          </ul>
+        <div class = "image-boxes">
+          <img class = "momo" src="pf-image.jpg" >
         </div>
-        <div class="slider__description">
-          <p>
-            写真をクリックしていただくとご覧いただけます。
-          </p>
-        </div>
-      </fieldset> 
+      </h1>
     </div>
-  </div>
-
-
-
-  <footer>
+    <figure>
+      <div class="skills-box" id="skills">
+        <div class="skills-title">SKILLS</div>
+        <section class="vision">
+          <div class="blackbgbg">
+            <div class="fadein">
+                <div class="box16">
+                    <p class="skills-maintext"><span class="fa fa-desktop"></span>Design・Front</p>
+                    <p class="skills-message">
+                      HTML / Haml / CSS / Scss<br>
+                      基本的なことはできます。<br>
+                      レスポンシブ対応も可能です。<br>
+                      javascrpt / jQuery<br>
+                      現在勉強中です。
+                    </p>
+                </div>
+                <div class="box16">
+                    <p class="skills-maintext"><span class="fa fa-desktop"></span>BackEnd</p>
+                    <p class="skills-message">
+                      Ruby on Rails<br>
+                      個人でのアプリ開発の経験あり<br>
+                      共同でのアプリ開発の経験あり<br>
+                      <br>
+                      制作物もご覧いただけます<br>
+                    </p>
+                </div>
+                <div class="box16">
+                    <p class="skills-maintext"><span class="fa fa-lightbulb-o"></span>Other</p>
+                    <p class="skills-message">
+                      AWS / MySQL / Git  <br>
+                      開発等で使用したツールです<br>
+                      AWSではES2を主に触れていました<br>
+                      <br>
+                      <br>
+                    </p>
+                </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </figure>
+    <div class="portfolio-box" id = "portfolio">
+      <div class="portfolio-content">
+        <fieldset>
+          <legend class="portfolio-title">PORTFOLIO</legend>
+          <div class="slider">
+            <input type="radio" name="rSlide" id="rsl-1" class="slider__control" checked/>
+            <input type="radio" name="rSlide" id="rsl-2" class="slider__control"/>
+            <input type="radio" name="rSlide" id="rsl-3" class="slider__control"/>
+            <input type="radio" name="rSlide" id="rsl-4" class="slider__control"/>
+            <input type="radio" name="rSlide" id="rsl-5" class="slider__control"/>
+            <ul class="slider__list">
+                <li class="slider__item">
+                  <label for="rsl-1" class="slider__label slider__label-1">
+                    <a href="http://52.194.83.62/" target="_blank">
+                    <img src="https://i.gyazo.com/31725590c0ae16ab8b10867d0ca24008.jpg" alt="Image from Gyazo1" width="1440" >
+                    </a>
+                  </label>
+                </li>
+                <li class="slider__item">
+                  <label for="rsl-2" class="slider__label slider__label-2">
+                    <a href="http://52.194.83.62:1214" target="_blank">
+                    <img src="https://i.gyazo.com/a055508044eb2a565b9db6f147fe7995.jpg" alt="Image from Gyazo2" width="1440" >
+                    </a>
+                  </label>
+                </li>
+                <li class="slider__item">
+                  <label for="rsl-3" class="slider__label slider__label-3">
+                    <a href="https://priceless-darwin-2f9176.netlify.com/" target="_blank">
+                    <img src="https://i.gyazo.com/f702607ee143ec86931ed88102ec8046.jpg" alt="Image from Gyazo3" width="1440" >
+                    </a>
+                  </label>
+                </li>
+                <li class="slider__item">
+                  <label for="rsl-4" class="slider__label slider__label-4">
+                    <img src="no-image.png" alt="no-image" class="slider__img">
+                  </label>
+                </li>
+                <li class="slider__item">
+                  <label for="rsl-5" class="slider__label slider__label-5">
+                    <img src="no-image.png" alt="no-image" class="slider__img">
+                  </label>
+                </li>
+            </ul>
+          </div>
+          <div class="slider__description">
+            <p>
+              写真をクリックしていただくとご覧いただけます。
+            </p>
+          </div>
+        </fieldset> 
+      </div>
+    </div>
+    <footer>
       <section id="contact">
-          <h1 class="section-header">CONTACT</h1>
+        <h1 class="section-header">CONTACT</h1>
           <div class="contact-wrapper">
-            
 <!---------------- CONTACT PAGE LEFT-----------------> 
             <form class = "form-box" action="https://api.staticforms.xyz/submit" method="post">
               <div class="form-group">
@@ -187,7 +174,6 @@
                   <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="">
                 </div>
               </div>
-        
               <div class="form-group">
                 <div class="col-sm-12">
                   <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="">
@@ -202,35 +188,27 @@
                 <div class="button">
                   <span class="send-text">SEND</span>
                 </div>
-              
               </button>
-              
             </form>
-            
 <!----------------CONTACT PAGE RIGHT -----------------> 
-              <div class="direct-contact-container">
-                <ul class="contact-list">
-                  <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Osaka | JP</span></i></li>
-                  <!-- <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Give me a call">(212) 555-2368</a></span></i></li> -->
-                  <!-- <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#" title="Send me an email">emailme@gmail.com</a></span></i></li> -->
-                </ul>
-                <hr>
-                <div class="social-media-list">
-                  <a href="https://github.com/yuuka-lav" target="_blank" class="contact-icon">
-                    <i class="fa fa-github" ></i></a>
-                  <!-- <li><a href="#" target="_blank" class="contact-icon">
-                    <i class="fa fa-twitter" aria-hidden="true"></i></a>
-                  </li> -->
-                  <a href="https://www.instagram.com/kota_____gf/saved/?hl=ja" target="_blank" class="contact-icon">
-                    <i class="fa fa-instagram" aria-hidden="true"></i></a>
-                  <a href="mailto:o70.kotaka.yuuka&#64;gmail.com" target="_blank" class="contact-icon">
-                    <i class="fa fa-envelope" aria-hidden="true"></i></a>
-                </div>
-                <hr>
-                <div class="copyright">&copy; YUUKA'S PORTFOLIO SITE</div>
+            <div class="direct-contact-container">
+              <ul class="contact-list">
+                <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Osaka | JP</span></i></li>
+              </ul>
+              <hr>
+              <div class="social-media-list">
+                <a href="https://github.com/yuuka-lav" target="_blank" class="contact-icon">
+                  <i class="fa fa-github" ></i></a>
+                <a href="https://www.instagram.com/kota_____gf/saved/?hl=ja" target="_blank" class="contact-icon">
+                  <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="mailto:o70.kotaka.yuuka&#64;gmail.com" target="_blank" class="contact-icon">
+                  <i class="fa fa-envelope" aria-hidden="true"></i></a>
               </div>
+              <hr>
+              <div class="copyright">&copy; YUUKA'S PORTFOLIO SITE</div>
+            </div>
           </div>
-        </section>  
-  </footer>
+      </section>  
+    </footer>
   </body>
 </html>
