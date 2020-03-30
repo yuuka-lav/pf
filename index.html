@@ -10,12 +10,27 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900,300" rel="stylesheet">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.3.min.js"></script>
+    <script src="./drower.js"></script>
     <script src="./fadein.js"></script>
   </head>
   <body>
     <header>
-      <div class="header-left">
-        <input id="drawer-checkbox" type="checkbox">
+      
+      <div class="menu-trigger" href="#">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>  
+      <nav>
+        <ul>
+          <li><a class="drower-name" href="#">HOME</a></li>
+          <li><a class="drower-name" href="#profile">PROFILE</a></li>
+          <li><a class="drower-name" href="#skills">SKILLS</a></li>
+          <li><a class="drower-name" href="#portfolio">PORTFOLIO</a></li>
+          <li><a class="drower-name" href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+        <!-- <input id="drawer-checkbox" type="checkbox">
         <label id="drawer-icon" for="drawer-checkbox"></label>
         <label id="drawer-close" for="drawer-checkbox"></label>
         <div id="drawer-content">
@@ -28,9 +43,10 @@
           <a class = "drawer-nametag" href="#portfolio">Portfolio</a>
           <br>
           <a class = "drawer-nametag" href="#contact">Contact</a>
-        </div>
+        </div> -->
+      <div class="header-left">
+        <h1 class="title-name"><span class="#"></span><img class= "logo" src="logo.png"/></h1>
       </div>
-      <h1 class="title-name"><span class="#"></span><img class= "logo" src="logo.png"/></h1>
       <div class="header-right">  
         <a href="#">HOME</a>
         <a href="#profile">PROFILE</a>
