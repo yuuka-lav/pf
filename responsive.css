@@ -123,6 +123,18 @@
     text-align: center;
     font-size: 12px;
   }
+  .modal-messaage{
+    font-size: 10px;
+    font-weight: bold;
+  }
+  .modal-content{
+    font-size: 3px;
+  }
+  .modal-wrapper .modal-window{
+    padding: 23px 10px 5px;
+    width: 100%;
+  }
+  
 
 /* ドロワー */
 
