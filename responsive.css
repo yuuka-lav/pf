@@ -148,7 +148,18 @@
   .slider__item img{
     filter: grayscale(0);
   }
-  
+  #rsl-1{
+    margin-left: -6px;
+  }
+  #rsl-2{
+    margin-left: -50px;
+  }
+  #rsl-4{
+    display: none;
+  }
+  #rsl-3{
+    display: none;
+  }
 /* ドロワー */
 
   header {
