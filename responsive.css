@@ -133,8 +133,22 @@
     padding: 23px 10px 5px;
     width: 100%;
   }
+  .slider__item{
+    width: 90%;
+  }
+  .slider__img {
+    box-shadow: 0px 0px 0px rgba(0,0,0,0.3); 
+  }
+  .slider{
+    height: 400px;
+  }
+  .slider__label {
+    transform: perspective(70em) rotateY(0deg);
+  }
+  .slider__item img{
+    filter: grayscale(0);
+  }
   
-
 /* ドロワー */
 
   header {

@@ -389,7 +389,6 @@ fieldset {
   -webkit-appearance: none;
   width: 12px;
   height: 12px;
-  border-radius: 50%;
   border: 1px solid #b7b7b7;
   background: #fff;
   cursor: pointer;
@@ -716,7 +715,7 @@ hr {
   border-radius: 2px;
   background: #fff;
   box-shadow: 0 0 30px rgba(0, 0, 0, .6);
-  vertical-align: middle
+  vertical-align: middle;
   position: sticky;
 }
 
