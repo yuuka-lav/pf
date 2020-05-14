@@ -149,7 +149,7 @@
     filter: grayscale(0);
   }
   #rsl-1{
-    margin-left: -6px;
+    margin-left: 7px;
   }
   #rsl-2{
     margin-left: -50px;
@@ -158,7 +158,7 @@
     display: none;
   }
   #rsl-3{
-    display: none;
+    margin-left: -20px;
   }
 /* ドロワー */
 
